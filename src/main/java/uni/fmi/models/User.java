@@ -82,7 +82,7 @@ public class User {
 	 */
 	public Set<Role> getRoles() {
 		if (roles == null) {
-			roles = new HashSet<Role>();
+			roles = new HashSet<>();
 		}
 		return null;
 	}

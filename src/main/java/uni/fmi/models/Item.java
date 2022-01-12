@@ -53,7 +53,7 @@ public class Item {
 	 */
 	public Set<Cart> getCarts() {
 		if (null == carts) {
-			carts = new HashSet<Cart>();
+			carts = new HashSet<>();
 		}
 		return carts;
 	}

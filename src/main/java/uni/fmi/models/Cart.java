@@ -45,7 +45,7 @@ public class Cart {
 	 */
 	public Set<Item> getItems() {
 		if (null == items) {
-			items = new HashSet<Item>();
+			items = new HashSet<>();
 		}
 		return null;
 	}

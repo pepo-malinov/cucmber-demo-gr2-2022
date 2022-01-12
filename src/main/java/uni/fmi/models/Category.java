@@ -54,7 +54,7 @@ public class Category {
 	 */
 	public Set<Category> getChildren() {
 		if (null == children) {
-			children = new HashSet<Category>();
+			children = new HashSet<>();
 		}
 		return children;
 	}
@@ -64,7 +64,7 @@ public class Category {
 	 */
 	public Set<Item> getItems() {
 		if (items == null) {
-			items = new HashSet<Item>();
+			items = new HashSet<>();
 		}
 		return items;
 	}

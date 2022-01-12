@@ -44,7 +44,7 @@ public class Role {
 	 */
 	public Set<User> getUsers() {
 		if (null == users) {
-			users = new HashSet<User>();
+			users = new HashSet<>();
 		}
 		return users;
 	}
