@@ -89,13 +89,13 @@ public class User {
 	}
 
 	/**
-	 * @return
+	 * @return existing roles or empty Set
 	 */
 	public Set<Role> getRoles() {
 		if (roles == null) {
 			roles = new HashSet<>();
 		}
-		return null;
+		return roles;
 	}
 
 	/**

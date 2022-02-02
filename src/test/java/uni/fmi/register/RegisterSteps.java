@@ -1,19 +1,20 @@
 package uni.fmi.register;
 
-import static org.junit.Assert.assertEquals;
-
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import uni.fmi.register.model.RegisterScreenModel;
+import uni.fmi.HomeScreenModel;
 
 public class RegisterSteps {
 
-	private RegisterScreenModel registerScreenModel;
+	private HomeScreenModel registerScreenModel;
+	
+	public RegisterSteps(final HomeScreenModel registerScreenModel) {
+		this.registerScreenModel=registerScreenModel;
+	}
 
 	@Given("^Потребителя отваря екрана за регистрация$")
 	public void openRegisterScreen() throws Throwable {
-		registerScreenModel = new RegisterScreenModel();
+		//registerScreenModel = new HomeScreenModel();
 	}
 
 	@When("^Въведе потребителско име \"([^\"]*)\"$")
@@ -41,8 +42,9 @@ public class RegisterSteps {
 		registerScreenModel.clickRegisterButton();
 	}
 
-	@Then("^Вижда съобщение \"([^\"]*)\"$")
-	public void checkMessage(final String expectedMessage) throws Throwable {
-		assertEquals(expectedMessage, registerScreenModel.getMessage());
-	}
+	/*
+	 * @Then("^Вижда съобщение: \"([^\"]*)\"$") public void checkMessage(final
+	 * String expectedMessage) throws Throwable { assertEquals(expectedMessage,
+	 * registerScreenModel.getMessage()); }
+	 */
 }

@@ -7,7 +7,7 @@ Feature: Регистрация на потребител
     And Въведе парола "<password2>" в полетао за втора парола
     And Въведе адрес за електронна поща "<email>"
     And Натиска бутона за регистрация
-    Then Вижда съобщение "<message>"
+    Then Вижда съобщение: "<message>"
 
     Examples: 
       | username  |  password | password2  |   email       |   message                    |

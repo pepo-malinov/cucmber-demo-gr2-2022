@@ -5,10 +5,14 @@ import static org.junit.Assert.assertEquals;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.junit.Ignore;
 import org.junit.Test;
+
+import uni.fmi.models.User;
 
 public class TestMap {
 
+	@Ignore
 	@Test
 	public void testMap() {
 		final Map<String, String> testInstance = new HashMap<>();
@@ -25,6 +29,22 @@ public class TestMap {
 		assertEquals(value2, "value2");
 		assertEquals(1, testInstance.size());
 
+	}
+
+	@Test
+	public void testConfigureUser() {
+		User user = new User("pesho", "pass123", "test@test.com");
+		configure(user);
+		
+		//"pesho"
+		//"Gosho"1
+		System.out.println(user.getUsername());
+	}
+
+	private void configure(final User userLocal) {
+		//userLocal = new User("gosho", "pass123", "test@test.com");
+		userLocal.setUsername("Gosho");
+		System.out.println(userLocal.getUsername());
 	}
 
 }

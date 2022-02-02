@@ -1,6 +1,7 @@
 package uni.fmi.models;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * 
@@ -12,8 +13,11 @@ public class Role {
 
 	/**
 	 * Default constructor
+	 * 
+	 * @param code
 	 */
-	public Role() {
+	public Role(final String code) {
+		this.code = code;
 	}
 
 	/**
